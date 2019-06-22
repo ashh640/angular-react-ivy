@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#root {
+  max-width: 400px;
+}
+
+app-progress-bar {
+  position: relative;
+  display: block;
+  height: 38px;
+  overflow: hidden;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+
+  .progressbar-track {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 100%;
+    background-color: #006eff;
+    color: #fff;
+    overflow: hidden;
+    font-size: 14px;
+    transition: width 0.6s ease;
+  }
+
+  .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    color: #000;
+    z-index: 1;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.btn-decrement {
+      left: 4px;
+      top: 4px;
+    }
+
+    &.btn-increment {
+      right: 4px;
+      top: 4px;
+    }
+  }
+}
+
+input {
+  display: block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
