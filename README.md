@@ -1,27 +1,20 @@
-# ReactAngular
+# Angular / React Ivy Proof of Concept
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0-beta.2.
+This is a simple proof of concept application that demonstrates how Ivy can used to bridge Angular components for use within React applications.
 
-## Development server
+This is a very simple example with limited support for more advanced features such as content projection etc..
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Currently an Angular component can be converted to a React component by calling the following function:
 
-## Code scaffolding
+```typescript
+const ProgressBar = createReactComponent<ProgressBarProps>('app-progress-bar', ProgressBarComponent);
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Inputs and event emitters will automatically be hooked up to props with the same name.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Instructions
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. Clone the repository
+2. Run `npm install`
+3. Run `ng serve` or `npm start` (if Angular CLI is not installed globally)
